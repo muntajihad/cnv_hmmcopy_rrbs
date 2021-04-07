@@ -22,9 +22,9 @@ HMMcopy consists of 2 parts:
 **************
 
 ## To Start with 3 wig files will be generated from terminal based tool
-** follow the link to install the tools : [hmmcopy_utils](https://github.com/shahcompbio/hmmcopy_utils)
+*follow the link to install the tools : [hmmcopy_utils](https://github.com/shahcompbio/hmmcopy_utils)*
 
-1. A wig contains the read counts from the BAM file by using readCounter tool:
+1. A wig contains the read counts from the BAM file by using readCounter tool (-w determines the size of the window/bin, here I used 10kb) :
 ```
 ./readCounter -w 10000 sample.sorted.bam > sample.wig
 ```
@@ -37,7 +37,22 @@ HMMcopy consists of 2 parts:
 ```
 ./mapCounter -w 10000 sample.sorted.bam > gc.wig
 ```
-
+********
+## Now R time:
+*HMMcopy is designed to plot one chr only each time (plotSegments), but the data we have is whole genome data. So, we should subset the data
+```
+setwd("~/myfiles")
+library(HMMcopy)
+raw_data <- wigsToRangedData(readfile = "sample.wig" ,gcfile = "gc.wig" ,mapfile = "map.wig")
+# subset the data, chr7 for example
+raw_data <- raw_data[raw_data$chr=="chr7",]
+corrected <- correctReadcount(raw_data)
+parameters <- HMMsegment(corrected, getparam = TRUE) 
+parameters$mu <- log(c(1, 1.4, 2, 2.7, 3, 4.5) / 2, 2)
+parameters$m <- parameters$mu
+segmented_copy <- HMMsegment(corrected, parameters)
+plotSegments(corrected, segmented_copy)
+```
 
 
 
