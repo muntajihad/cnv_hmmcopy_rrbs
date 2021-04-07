@@ -2,9 +2,9 @@
 
 This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.org/packages/release/bioc/html/HMMcopy.html)
 
-**Used tools: 
+**Used tools:**
 > HMMcopy (R package)
-**Used files: 
+**Used files:** 
 > aligned reads (BAM file)
 > reference genome (hg 19)
            
