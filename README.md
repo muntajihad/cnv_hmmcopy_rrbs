@@ -39,7 +39,7 @@ HMMcopy consists of 2 parts:
 ```
 ********
 ## Now R time:
-*HMMcopy is designed to plot one chr only each time (plotSegments), but the data we have is whole genome data. So, we should subset the data
+*HMMcopy is designed to plot one chr only each time (plotSegments), but the data we have is whole genome data. So, we should subset the data*
 ```
 setwd("~/myfiles")
 library(HMMcopy)
