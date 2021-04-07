@@ -4,6 +4,7 @@ This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.
 
 **Used tools:**
 > HMMcopy (R package)
+
 **Used files:** 
 > aligned reads (BAM file)
 > reference genome (hg 19)
