@@ -24,9 +24,9 @@ HMMcopy consists of 2 parts:
 ## To Start with 3 wig files will be generated from terminal based tool
 
 1. A wig contains the read counts from the BAM file by using readCounter tool:
-'''
+```
 ./readCounter -w 10000 sample.sorted.bam
-'''
+```
 3. A wig contains the gc content from reference geneome (fasta)
 4. A wig contains the mappability counts from wgEncodeCrgMapabilityAlign100mer.bigWig file 
 ** I this case 100mer will be used because my the sequencing reads length is (150bp), for compatibility.
