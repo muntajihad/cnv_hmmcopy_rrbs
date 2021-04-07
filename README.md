@@ -1,6 +1,6 @@
 # CNV estimation from DNA methylation sequencing data (RRBS)
 
-This tutorial is based on [HMMcopy R package vignette] https://www.bioconductor.org/packages/release/bioc/html/HMMcopy.html
+This tutorial is based on [HMMcopy R package vignette] (https://www.bioconductor.org/packages/release/bioc/html/HMMcopy.html)
 
 **used tools:** HMMcopy (R package)
 **used files:** aligned reads (BAM file)
