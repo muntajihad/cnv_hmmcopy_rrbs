@@ -19,13 +19,13 @@ This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.
 HMMcopy consists of 2 parts:
 1. terminal based tools
 2. R package
+**************
 
-First 3 wig files will be generated 
-> 1 wig contains the read counts from the BAM file
-> 
-> 1 wig contains the gc content from reference geneome (fasta)
-> 
-> 1 wig contains the mappability counts from wgEncodeCrgMapabilityAlign100mer.bigWig file 
+## To Start with 3 wig files will be generated 
+
+1. wig contains the read counts from the BAM file
+3. wig contains the gc content from reference geneome (fasta)
+4. wig contains the mappability counts from wgEncodeCrgMapabilityAlign100mer.bigWig file 
 ** I this case 100mer will be used because my the sequencing reads length is (150bp), for compatibility.
 
 
