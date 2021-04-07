@@ -7,7 +7,7 @@ This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.
                 reference genome
            
            
-### HMMCopy R package is designed to estimate copy number variation (CNV) from whole genome sequencing data (WGS). But, here I will use it to estimate CNV from Reduced Representative Bisulfite seqencing data -DNA Methylation-.
+**HMMCopy R package is designed to estimate copy number variation (CNV) from whole genome sequencing data (WGS). But, here I will use it to estimate CNV from Reduced Representative Bisulfite seqencing data -DNA Methylation-.
 
 
 > hi
