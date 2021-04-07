@@ -21,7 +21,7 @@ HMMcopy consists of 2 parts:
 2. R package
 **************
 
-## To Start with 3 wig files will be generated from terminal based tool
+## First, 3 wig files should be generated from "terminal based" tools of hmmcopy:
 *follow the link to install the tools : [hmmcopy_utils](https://github.com/shahcompbio/hmmcopy_utils)*
 
 1. A wig contains the read counts from the BAM file by using readCounter tool (-w determines the size of the window/bin, here I used 10kb) :
