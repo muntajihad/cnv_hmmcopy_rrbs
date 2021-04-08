@@ -5,4 +5,4 @@ map= "/path/to/wgEncodeCrgMapabilityAlign100mer.bigWig"
 
 ./readCounter -w 10000 $sample > sample.wig
 ./mapCounter -w 10000 $map > map.wig
-./mapCounter -w 10000 $ref > gc.wig
+./gcCounter -w 10000 $ref > gc.wig
