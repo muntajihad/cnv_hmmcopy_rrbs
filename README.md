@@ -6,9 +6,9 @@ This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.
 > HMMcopy (R package)
 
 **Used files:** 
-> aligned reads (BAM file)
+> Aligned reads (BAM file)
 
-> reference genome (hg 19)
+> Reference genome (hg 19)
  
 > wgEncodeCrgMapabilityAlign100mer.bigWig downloaded from [UCSC Golden path](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/encodeDCC/wgEncodeMapability/)
            
@@ -17,25 +17,26 @@ This tutorial is based on [HMMcopy R package vignette](https://www.bioconductor.
 ****************
 
 HMMcopy consists of 2 parts:
-1. terminal based tools
+1. Terminal based tools
 2. R package
 **************
 
-## First, 3 wig files should be generated from "terminal based" tools of hmmcopy:
+## First, 3 wig files should be generated from "terminal based" tools of hmmcopy_util:
 *follow the link to install the tools : [hmmcopy_utils](https://github.com/shahcompbio/hmmcopy_utils)*
 
-1. A wig contains the read counts from the BAM file by using readCounter tool (-w determines the size of the window/bin, here I used 10kb) :
+1. Wig contains the read counts from the BAM file by using readCounter tool (-w determines the size of the window/bin, here I used 10kb) :
 ```
 ./readCounter -w 10000 sample.sorted.bam > sample.wig
 ```
-2. A wig contains the gc content from reference geneome (fasta)
+2. Wig contains the GC content from reference geneome (fasta)
+```
+./gcCounter -w 10000 sample.sorted.bam > gc.wig
+```
+
+3. Wig contains the mappability counts from wgEncodeCrgMapabilityAlign100mer.bigWig file 
+** I this case 100mer will be used because the length of my sequencing reads is 150bp (for compatibility).
 ```
 ./mapCounter -w 10000 wgEncodeCrgMapabilityAlign100mer.bigWig > map.wig
-```
-3. A wig contains the mappability counts from wgEncodeCrgMapabilityAlign100mer.bigWig file 
-** I this case 100mer will be used because my the sequencing reads length is (150bp), for compatibility.
-```
-./mapCounter -w 10000 sample.sorted.bam > gc.wig
 ```
 ********
 ## Now R time:
