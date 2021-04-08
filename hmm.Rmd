@@ -1,9 +1,0 @@
----
-title: "hmmcopy"
-output: github_document
----
-
-```{r read wig files}
-library(HMMcopy)
-```
-
