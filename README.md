@@ -39,6 +39,7 @@ HMMcopy consists of 2 parts:
 ```
 ********
 ## Now R time:
+*Delete chrM from the 3 wig files (for example: manually from text editor)*
 *HMMcopy is designed to plot one chr only each time (plotSegments), but the data we have is whole genome data. So, we should subset the data*
 ```
 setwd("~/myfiles")
